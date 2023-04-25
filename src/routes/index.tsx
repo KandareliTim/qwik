@@ -13,15 +13,15 @@ export default component$((): any => {
     inputValue.value = "";
   });
 
-  // const renderItem = () => {
-  //   if (list.length) {
-  //     return list.map((item, index) => {
-  //       return <li key={index}>{item.text}</li>;
-  //     });
-  //   }
-  //
-  //   return null;
-  // };
+  const renderItem = () => {
+    if (list.length) {
+      return list.map((item, index) => {
+        return <li key={index}>{item.text}</li>;
+      });
+    }
+
+    return null;
+  };
 
   return (
     <>
@@ -35,7 +35,7 @@ export default component$((): any => {
         <button onClick$={addTodo}>Add item</button>
       </div>
 
-      {/*<ul>{renderItem()}</ul>*/}
+      <ul>{renderItem()}</ul>
     </>
   );
 });
