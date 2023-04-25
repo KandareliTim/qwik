@@ -1,7 +1,7 @@
 import { component$, useSignal, $, useStore } from "@builder.io/qwik";
 
 export default component$((): any => {
-  const list = useStore([]);
+  const list = useStore<{text: string}[]>([]);
   const inputValue = useSignal('');
 
   const onInputChange = $((event: any) => inputValue.value = event?.target?.value)
