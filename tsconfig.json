@@ -7,7 +7,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
     "strict": false,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
