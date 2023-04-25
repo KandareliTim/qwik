@@ -4,7 +4,7 @@ export default component$((): any => {
   const list = useStore([]);
   const inputValue = useSignal('');
 
-  const onInputChange = $((event) => inputValue.value = event?.target.value)
+  const onInputChange = $((event: any) => inputValue.value = event?.target?.value)
 
   const addTodo = $(() => {
     list.push({text: inputValue.value})
@@ -13,8 +13,8 @@ export default component$((): any => {
 
   const renderItem = () => {
     if (list.length) {
-      return list.map(({text}, index) => {
-        return <li key={index}>{text}</li>
+      return list.map((item, index) => {
+        return <li key={index}>{item.text}</li>
       })
     }
 
